@@ -1,0 +1,58 @@
+<app-header></app-header>
+<main role="main" class="container-fluid">
+    <div class="row">
+        <div id="myOverlay" class="overlay">
+            <div class="overlay-content">
+                <div class="container">
+                    <form class="srch-frm" action="#">
+                        <div class="row px-3">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <input type="text" class="form-control search-slt" placeholder="Enter Location, Project or Landmark">
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option disabled selected>Flat</option>
+                                <option>APARTMENT</option>
+                                <option>VILLA</option>
+                                <option>HOUSE</option>
+                                <option>INDEPENDENT FLOOR</option>                                <option>Example one</option>
+                            </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                <option disabled selected>Budget</option>
+                                <option>1 Crore</option>
+                                <option>2 Crore</option>
+                                <option>3 Crore</option>
+                                <option>4 Crore</option>
+                                <option>5 Crore</option>
+                            </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <button type="button" class="btn btn-primary wrn-btn"> Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="container-fluid bg-eee">
+    <div class="container  py-2">
+        <div class="row">
+            <div class="col-md-12 py-4 text-center">
+                <h4 class="mb-0">Project List </h4>
+            </div>
+        </div>
+        <app-slist></app-slist>
+    </div>
+
+    <app-footer></app-footer>

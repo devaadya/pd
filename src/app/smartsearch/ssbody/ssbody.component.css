@@ -1,0 +1,30 @@
+.aplybtn {
+    font-size: 12px;
+    background: aliceblue;
+    text-decoration: none;
+    padding: 2px 5px;
+    color: #4967ff;
+}
+
+.aplybtn:hover {
+    background: #4967ff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card {
+    background-color: #ececec;
+}
+
+.search-slt {
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 0px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius: 0;
+}

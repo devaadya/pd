@@ -1,0 +1,212 @@
+<app-header></app-header>
+<main role="main" class="container-fluid">
+    <!-- <div class="row">
+        <div id="myOverlay" class="overlay">
+            <div class="overlay-content">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button routerLink="/filter" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+    <div class="row">
+        <!-- <div class="sliderBox">
+            <ngx-slider [init]="slider"></ngx-slider>
+        </div> -->
+        <div id="myOverlay" class="overlay">
+
+            <div class="overlay-content">
+
+                <div class="container">
+                    <form class="srch-frm" action="#">
+                        <div class="row px-3">
+                            <div class="col-lg-12">
+                                <div class="row ">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <select class="form-control search-slt dd-slt" id="exampleFormControlSelect1">
+                                        <option disabled selected>Location</option>
+                                        <option>Delhi</option>
+                                        <option>Noida</option>
+                                        <option>Chennai</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+                                        <input type="text" class="form-control search-slt txt-slt" placeholder="Search...'">
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <button routerLink="/filter" type="button" class="btn btn-primary wrn-btn"> <i class="fa fa-search"></i> SEARCH</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<section class="container-fluid position-relative">
+    <div class="row decide-row">
+        <div class="container decide-container">
+            <div class="row decide-better">
+                <div class="col-md-3 px-1 better-box">
+                    <a href="#" class="better-item">
+                        <img class="card-img-top" src="http://198.12.156.249:45001/pd/assets/images/icon/icon-1.png">
+                        <p>check Rates &amp; Trends</p>
+                    </a>
+                </div>
+
+                <div class="col-md-3 px-1 better-box">
+                    <a routerLink="/smartsearch" class="better-item">
+                        <img class="card-img-top" src="http://198.12.156.249:45001/pd/assets/images/icon/icon-2.png">
+                        <p>smart search</p>
+                    </a>
+                </div>
+
+                <div class="col-md-3 px-1 better-box">
+                    <a href="#" class="better-item">
+                        <img class="card-img-top" src="http://198.12.156.249:45001/pd/assets/images/icon/icon-3.png">
+                        <p>Check Your Loan Eligibility</p>
+                    </a>
+                </div>
+
+                <div class="col-md-3 px-1 better-box">
+                    <a routerLink="/emi" class=" better-item">
+                        <img class="card-img-top" src="http://198.12.156.249:45001/pd/assets/images/icon/icon-4.png">
+                        <p>calculate your emi</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-f9f9f9">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 hedding-py3 text-center">
+                    <h4 class="mb-0 hedding-pt3">Project Gallery </h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pb-5">
+
+                <ng-container *ngFor="let pgtitem of pgt; let i = index;">
+                    <div class="col-md-6 px-1" *ngIf="i<4">
+                        <div class="card rounded-0 mb-2 box-shadow position-relative">
+                            <div class="card-body imgbox p-0">
+                                <img class="card-img-top w-100 d-block rounded-0" src="{{pgtitem.image}}" onerror="this.src='../../assets/images/imagenotfound.jpg';" style=" height: 225px; ">
+                                <span class="offer">Offer <strong> 12% OFF</strong> </span>
+                            </div>
+                            <div class="card-body p-2 pg-body ">
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="btn-group ">
+                                        <strong class="propname">{{pgtitem.text1}}</strong>
+                                    </div>
+                                    <strong class="propname"> ₹ {{pgtitem.budget}} </strong>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="btn-group">
+                                        <span class="pddata">{{pgtitem.text3}}  </span>
+                                    </div>
+                                    <p class="card-text mb-0">{{pgtitem.bhk}} {{pgtitem.cotegory}}</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="btn-group ">
+                                        <small class="text-muted">{{pgtitem.text5}}</small>
+                                    </div>
+                                    <button type="button" routerLink="{{pgtitem.routerLink}}" class="btn btn-sm rounded-0 btn-outline-secondary ">{{pgtitem.pgtbtn1}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngFor="let pgtitem of pgt; let i = index;">
+                    <div class="col-md-3 px-1 " *ngIf="i>3">
+                        <div class="card rounded-0 mb-2 box-shadow ">
+                            <img class="card-img-top w-100 d-block rounded-0 " src="{{pgtitem.image}}" onerror="this.src='http://198.12.156.249:45001/pd/assets/images/imagenotfound.jpg';" style="height: 225px; ">
+                            <div class="card-body px-2 py-1 pg-body ">
+                                <strong class="propname d-block ">{{pgtitem.text1}} </strong>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="btn-group ">
+                                        <strong class="propname ">₹ {{pgtitem.budget}} </strong>
+                                    </div>
+                                    <p class="card-text mb-0 ">{{pgtitem.bhk}} {{pgtitem.cotegory}}</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <span class="pddata ">{{pgtitem.text3}} </span>
+                                </div>
+                                <p class="cmp-dec ">
+                                    <small class="text-muted ">{{pgtitem.text5}}</small>
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <button type="button " routerLink="{{pgtitem.routerLink}}" class="btn rounded-0 btn-sm btn-block btn-outline-secondary ">{{pgtitem.pgtbtn1}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="tel:9169971999" class="AudioCall" title="Audio Call">
+    <i class="material-icons">call</i>
+</a>
+<a href="tel:9169971999" class="VideoCall" title="Video Call">
+    <i class="material-icons">video_call</i>
+</a>
+<a href="#" data-toggle="modal" data-target="#QueryFormModel" class="SendQuery" title="Send Query">SEND QUERY</a>
+
+<!-- Query Form Modal -->
+<div class="modal" id="QueryFormModel">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header text-uppercase py-1">
+                <h6 class="modal-title">Query Form</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="row">
+                        <div class="col-md-6 pr-1">
+                            <div class="form-group input-group-sm">
+                                <input type="text" class="form-control rounded-0" id="fName" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-1">
+                            <div class="form-group input-group-sm">
+                                <input type="text" class="form-control rounded-0" id="lName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group input-group-sm">
+                                <input type="email" class="form-control rounded-0" id="yourEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group input-group-sm">
+                                <input type="tel" class="form-control rounded-0" id="yourMobile" placeholder="Mobile">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group input-group-sm">
+                                <textarea class="form-control rounded-0" id="yourDescription" placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group input-group-sm mb-0">
+                                <button type="button" class="btn btn-sm btn-outline-primary  rounded-0 mr-2">Send Query </button>
+                                <button type="reset" class="btn btn-sm btn-outline-dark rounded-0">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

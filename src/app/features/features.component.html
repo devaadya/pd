@@ -1,0 +1,1327 @@
+<app-header></app-header>
+
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-5 col-sm-5 mb-2 px-1  mapcontainer">
+            <div class="mapbox">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14012.133407642608!2d77.3209443!3d28.598776249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1575542670623!5m2!1sen!2sin" width="100%" height="564" frameborder="0"
+                    style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-7 mb-2 setscroll">
+            <div class="row">
+                <ng-container *ngFor="let fitem of featurelist; let i = index;">
+                    <div class="col-md-6 col-sm-6 mb-2 px-1">
+                        <div class="boxd">
+                            <div class="our-team">
+                                <div class="pic">
+                                    <img src="{{fitem.image}}" onerror="this.src='http://198.12.156.249:45001/pd/assets/images/imagenotfound.jpg';">
+                                </div>
+                                <div class="team-content">
+                                    <strong class="post">{{fitem.post}}</strong>
+                                    <strong class="team-title"> {{fitem.rupee}} {{fitem.offbudget}} <small> | <del> {{fitem.rupee}} {{fitem.budget}}</del> | {{fitem.cotegory}}</small></strong>
+                                    <p class="description">{{fitem.pdetails}}</p>
+                                    <div class="row">
+                                        <div class="col-md-6 vpbtn-pad">
+                                            <a href="{{fitem.vplink}}" class="btn btn-sm btn-block btn-outline-primary">{{fitem.vpbtn}}</a>
+                                        </div>
+                                        <div class="col-md-6 vdbtn-pad">
+                                            <a href="#" data-toggle="modal" [attr.data-target]="'#' + fitem.mdlid" class="btn btn-sm btn-block btn-outline-primary">{{fitem.vdbtn}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <button type="button" class="btn btn-primary" (click)="show()">
+    Open modal
+  </button>
+    <div class="modal" [style.display]="showModal ? 'block' : 'none'">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">{{ title }}</h4>
+                    <button type="button" class="close" (click)="hide()">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    {{ content }}
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" (click)="hide()">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- prop1 Modal -->
+<div class="modal propmodel" id="prop1">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p1/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- prop2 Modal -->
+<div class="modal propmodel" id="prop2">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p2/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- prop3 Modal -->
+<div class="modal propmodel" id="prop3">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p3/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- prop4 Modal -->
+<div class="modal propmodel" id="prop4">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p4/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- prop5 Modal -->
+<div class="modal propmodel" id="prop5">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p5/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- prop6 Modal -->
+<div class="modal propmodel" id="prop6">
+    <div class="modal-dialog my-0">
+        <div class="modal-content">
+            <div class="modal-body p-0 position-relative">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 modelscroll">
+                            <div class="row">
+                                <div class="col-md-12  px-1 my-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p1.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p2.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p3.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p4.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p5.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p6.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p7.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p8.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p9.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p10.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 px-1 mb-1">
+                                    <div class="boxd">
+                                        <a href="#" class="our-team">
+                                            <div class="pic">
+                                                <img src="http://198.12.156.249:45001/pd/assets/images/property/p6/p11.webp">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 px-0">
+                            <nav class="navbar navbar-expand-sm moldenav bg-white shadow-sm">
+                                <a class="navbar-brand" href="#">PROPERTY</a>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Save</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Share</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">More</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <section class="container-fluid bg-f9f9f9">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+                                        <div class="team-content mb-3">
+                                            <h4 class="post text-muted">Bellevue WA Real Estate </h4>
+                                            <strong class="team-title">4 CRORE <small>INDEPENDENT FLOOR  | FULLY FURNISHED | 2,500 sqft</small></strong>
+                                            <p class="description mb-0">Asbury Park | 12821 126th Way NE, India</p>
+                                            <div class="desclidht">
+                                                <div class="dot bg-warning"></div>
+                                                <span>House for rentRent Zestimate: ₹6,820</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Apply Now</button>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <button type="button" class="btn btn-block btn-outline-primary">Request a tour</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container-fluid modelscrollright">
+                                <div class="row">
+                                    <div class="col-md-12 py-3">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="post text-muted">Overview </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row borderbottom-1 bordertop-1">
+                                            <div class="col-md-4 pr-1 text-center py-2">
+                                                <span>Days listed</span>
+                                                <p class="mb-0">1</p>
+                                            </div>
+                                            <div class="col-md-4 px-1 text-center py-2">
+                                                <span>Contacts</span>
+                                                <p class="mb-0">3</p>
+                                            </div>
+                                            <div class="col-md-4 pl-1 text-center py-2">
+                                                <span>Applications</span>
+                                                <p class="mb-0">0</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 py-2">
+
+                                                <p class="mb-0">This beautifully updated house is in the sought after Norwood Village/Woodridge area just minutes north of Factoria and minutes from downtown Bellevue, it also has easy access to 405 and I90. This west facing
+                                                    2500 ssquare foot home is on a cul de sac. It has an open floor plan with large family room and bonus library/Rec room. It has all new paint and carpets and is in great condition. The kitchen has cherry
+                                                    wood cabinets, stainless steel appliances and a Jenn Air Gas Range, with convection oven and eating bar. There is a large family room off of the living room and kitchen that can be closed off with beautiful
+                                                    Glass Doors. The master on the main floor has its own deck, large organized closed space and a separate shoe closet. The attached bathroom has dual sinks with cherry cabinets, granite tile and a large
+                                                    dual headed shower. In the daylight basement there are two bedrooms, a bath with shower, open Library/Rec Room/Den with custom shelving and wood burning fireplace. This home has a large beautiful yard
+                                                    with flowers and large grass area. Large Private Deck off of the kitchen. There is lots of parking and the home is just blocks from a community park with basketball and tennis courts, along with kids
+                                                    play area. It also has laundry room with recently new washer and dryer. Pet's are negotiable with the right security deposit.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<app-footer></app-footer> -->

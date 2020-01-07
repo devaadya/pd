@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-10 col-sm-10 mb-2 left-list">
+        <ng-container *ngFor="let plistitem of plist; let i = index;">
+            <div class="col-md-12 col-sm-12 mb-3 px-0">
+                <div class="boxd">
+                    <a routerLink="{{plistitem.routerLink}}" class="our-team">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2">
+                                <div class="pic">
+                                    <img class="lst" src="{{plistitem.image}}" onerror="this.src='../../assets/images/img-not-uploaded.svg';">
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-sm-10">
+                                <div class="team-content">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <strong class="team-title "> {{plistitem.bhk}} {{plistitem.cotegory}} <small> {{plistitem.text1}}</small> </strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="row text-uppercase">
+                                        <div class="col-md-2 col-sm-2">
+                                            <strong class="team-title">{{plistitem.rupee}} {{plistitem.budget}} </strong>
+
+                                            <p class="description"><span class="text-000"> {{plistitem.rupee}} {{plistitem.persqftrs}}</span> {{plistitem.persqft}}</p>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <strong class="team-title d-block"><small>{{plistitem.areatype}}<span class="text-000"> {{plistitem.sqft}}</span></small></strong>
+                                            <strong class="team-title d-block"><small>{{plistitem.furnishtype}}</small></strong>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                            <strong class="team-title d-block"><small>{{plistitem.mstatus}}<span class="text-000"> {{plistitem.movestatus}}</span></small></strong>
+                                            <strong class="team-title d-block"><small>{{plistitem.washroom}}<span class="text-000">  {{plistitem.noofwashroom}}</span></small></strong>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <strong class="team-title d-block"><small>{{plistitem.agent}}<span class="text-000">  {{plistitem.agentname}}</span></small></strong>
+                                            <strong class="team-title d-block"><small>{{plistitem.floor}}<span class="text-000">  {{plistitem.nooffloor}}</span></small></strong>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <strong class="team-title"><small>{{plistitem.pdetails}}</small></strong>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pr-1">
+                                            <strong class="post">{{plistitem.buyerslist}} {{plistitem.buyers}} </strong>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <button type="button" class="btn btn-block btn-sm cont-agent btn-outline-secondary text-uppercase">
+                                                                {{plistitem.cabtn}}
+                                                            </button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button type="button" class="btn btn-block btn-sm btn-outline-secondary text-uppercase">{{plistitem.pdbtn}}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="col-md-2 col-sm-2 mb-2  popular-list">
+        <div class="row">
+            <div class="alert mb-0 p-0 rounded-0">
+                <div class="col-md-12 col-sm-12 mb-1 px-1 pt-1  text-uppercase"><strong>Popular Property's</strong></div>
+                <ng-container *ngFor="let plistitem of plist; let i = index;">
+                    <div class="col-md-12 col-sm-12 mb-3 px-1" *ngIf="i<7">
+                        <div class="boxd">
+                            <a routerLink="{{plistitem.routerLink}}" class="our-team">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="pic">
+                                            <img src="{{plistitem.image}}" onerror="this.src='../../assets/images/img-not-uploaded.svg';">
+                                        </div>
+                                        <div class="team-content">
+                                            <div class="row">
+
+                                                <div class="col-md-12 col-sm-12">
+                                                    <strong class="post"> {{plistitem.bhk}} {{plistitem.cotegory}} </strong>
+                                                    <strong class="post">{{plistitem.rupee}} {{plistitem.budget}}  </strong>
+                                                    <strong class="team-title d-block"><small>{{plistitem.buyerslist}} {{plistitem.buyers}}</small></strong>
+                                                    <strong class="team-title d-block"><small>{{plistitem.areatype}}<span class="text-000"> {{plistitem.sqft}}</span></small></strong>
+                                                </div>
+
+                                                <div class="col-md-12 col-sm-12">
+                                                    <button type="button" class="btn btn-block btn-sm btn-outline-secondary text-uppercase">{{plistitem.pdbtn}}</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+    </div>
+</div>

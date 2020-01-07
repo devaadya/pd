@@ -1,0 +1,13 @@
+.aplybtn {
+    font-size: 12px;
+    background: aliceblue;
+    text-decoration: none;
+    padding: 2px 5px;
+    color: #4967ff;
+}
+
+.aplybtn:hover {
+    background: #4967ff;
+    text-decoration: none;
+    color: #fff;
+}

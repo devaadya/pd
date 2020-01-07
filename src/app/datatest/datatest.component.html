@@ -1,0 +1,26 @@
+<h4>LOCAL DATA</h4>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+    <div *cdkVirtualFor="let item of ds" class="example-item">{{item || 'Loading...'}}</div>
+</cdk-virtual-scroll-viewport>
+<h4>API DATA</h4>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+    <tr *cdkVirtualFor="let itemRec of records$" class="example-item">
+        <td> {{itemRec.AlertID}} </td>
+        <td>{{itemRec.UserID}}</td>
+        <td>{{itemRec.PropertyID}}</td>
+        <td>{{itemRec.SenderID}}</td>
+        <td>{{itemRec.Subject}}</td>
+        <td>{{itemRec.Message}}</td>
+        <td><img width=" 100 " src="{{itemRec.ImageName}} "></td>
+        <td>{{itemRec.SendDate}}</td>
+        <td>{{itemRec.IsRead}}</td>
+        <td>{{itemRec.IsDelete}}</td>
+        <td>{{itemRec.InstructionFormID}}</td>
+        <td>{{itemRec.IsAcknowledge}}</td>
+        <td>{{itemRec.CampaignID}}</td>
+        <td>{{itemRec.AlertType}}</td>
+        <td>{{itemRec.ParentID}}</td>
+        <td>{{itemRec.ScheduleIncidentID}}</td>
+    </tr>
+</cdk-virtual-scroll-viewport>

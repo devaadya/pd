@@ -1,0 +1,136 @@
+.moldenav a {
+    text-decoration: none;
+}
+
+.propmodel {
+    height: 100vh;
+    width: 100%;
+    padding-right: 0px !important;
+}
+
+.propmodel .close {
+    position: absolute;
+    right: -24px;
+    font-size: 40px;
+    color: #fff;
+    top: 8px;
+    opacity: 1;
+    outline: 0;
+}
+
+.propmodel .modal-dialog {
+    max-width: 86% !important;
+}
+
+.propmodel .modal-dialog .modal-content {
+    margin: 0 auto;
+    border-radius: 0px;
+    border: 0px solid rgba(0, 0, 0, .2);
+    height: 100vh;
+}
+
+.mapcontainer {
+    margin: 56px 0 0;
+}
+
+.modelscroll {
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modelscrollright {
+    max-height: 61.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.setscroll {
+    max-height: 89vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 56px 0 0;
+}
+
+.our-team {
+    text-decoration: none;
+}
+
+.our-team .pic {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team .pic img {
+    width: 100%;
+    height: auto;
+}
+
+.our-team .team-content {
+    background: #fff;
+    padding: 6px;
+    border-bottom: 4px solid #006AFF;
+}
+
+.our-team .team-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5d5e5e;
+    margin: 0 0 5px 0;
+}
+
+.our-team .post {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6f6f6f;
+}
+
+.our-team .description {
+    font-size: 11px;
+    color: #898989;
+    margin-bottom: 0px;
+}
+
+.our-team .desclidht {
+    font-size: 11px;
+    color: #898989;
+    margin-bottom: 0px;
+}
+
+.desclidht .dot {
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.vpbtn-pad {
+    padding-right: 4px;
+}
+
+.vdbtn-pad {
+    padding-left: 4px;
+}
+
+@media screen and (max-width: 990px) {
+    .our-team {
+        margin-bottom: 20px;
+    }
+    .our-team .team-content {
+        border-bottom: 2px solid #006AFF;
+    }
+    .vpbtn-pad {
+        padding-right: 15px;
+        margin-bottom: 5px;
+    }
+    .vdbtn-pad {
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,485 @@
+<app-header></app-header>
+
+<header id="header" class="header">
+    <div class="header-content">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                    <div class="text-container">
+                        <h1 class="mb-0 text-info">Let me know </h1>
+                        <h2> About you and <span class="bg-warning rounded px-2 m-0 py-1 text-white text-uppercase" style="font-size: 30px; box-shadow: 0px 3px 6px #617bff; background-image: linear-gradient(to right, #a5b2f5 , #a2f7ff); color: #f9f9f9; text-shadow: 1px 1px 1px #002aff;"><i class="far fa-building"></i> property </span>                            <br class="d-none d-md-block d-lg-block d-xl-block"> are you looking for?</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-md-block d-lg-block d-xl-block" style="background-image: url(http://198.12.156.249:45001/pd/assets/images/properties.gif);    background-size: cover; background-repeat: no-repeat;">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<div id="features" class="tabs ">
+    <div class="container-fluid bg-dae6ff bxs ">
+        <div class="row position-relative">
+            <div class="col-12 px-2">
+                <div class="d-block d-md-none d-lg-none d-xl-none text-center position-relative slidecont">
+                    <i class="material-icons icleftmove">arrow_back</i>
+                    <i class="material-icons icrightmove">arrow_forward</i>
+                </div>
+                <ul class="nav nav-tabs tabsMobile mt-2" id="lenoTabs" role="tablist">
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : budgetdt} " class="nav-link text-white active" (click)="playAudio2()" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                            <i class="material-icons animated zoomIn fast">monetization_on</i> <br> BUDGET
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{budgetdt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : profiledt}" class="nav-link text-white" (click)="playAudio3()" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                            <i class="material-icons animated zoomIn fast">people_alt</i> <br>Profile
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{profiledt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : purposedt}" class="nav-link text-white" (click)="playAudio4()" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                            <i class="material-icons animated zoomIn fast">emoji_flags</i> <br>PURPOSE
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{purposedt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : typedt}" class="nav-link text-white" (click)="playAudio5()" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+                            <i class="material-icons animated zoomIn fast">gamepad</i> <br>TYPE
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{typedt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : qualitydt}" class="nav-link text-white" (click)="playAudio6()" id="nav-tab-5" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
+                            <i class="material-icons animated zoomIn fast">beenhere</i> <br> QUALITY
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{qualitydt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : locariondt}" class="nav-link text-white" (click)="playAudio7()" id="nav-tab-6" data-toggle="tab" href="#tab-6" role="tab" aria-controls="tab-6" aria-selected="false">
+                            <i class="material-icons animated zoomIn fast">gps_fixed</i> <br> LOCATION
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{locariondt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : propertytypedt}" class="nav-link text-white" (click)="playAudio8()" id="nav-tab-7" data-toggle="tab" href="#tab-7" role="tab" aria-controls="tab-7" aria-selected="false">
+                            <i class="material-icons animated zoomIn faster">business</i> <br> PRPOERTY TYPE
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{propertytypedt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : furnishingdt}" class="nav-link text-white" (click)="playAudio9()" id="nav-tab-8" data-toggle="tab" href="#tab-8" role="tab" aria-controls="tab-8" aria-selected="false">
+                            <i class="material-icons animated zoomIn faster">layers</i> FURNISHING
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{furnishingdt}}</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="{'one-time-animation':ISADIOPLAYING==true, 'selecedtab' : behaviourdt}" class="nav-link text-white" (click)="playAudio10()" id="nav-tab-9" data-toggle="tab" href="#tab-9" role="tab" aria-controls="tab-9" aria-selected="false">
+                            <i class="material-icons animated zoomIn faster">emoji_objects</i> Behaviour
+                        </a>
+                        <div class="chip-box position-relative">
+                            <i class="material-icons">star</i>
+                            <p>{{behaviourdt}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 px-2">
+                <button type="submit " routerLink="/propertylist" class="btn btn-sm btn-primary searchbtn" mat-button>
+                  <i class="material-icons animated zoomIn faster">search</i>
+                  <span class=""> Search</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid tabsec">
+        <div class="container">
+            <div class="row pt-md-3">
+                <div class="tab-content" id="lenoTabsContent">
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2 pb-md-2">
+                                        <h4 class="animated slideInUp faster">What is the budget for the commercial property?</h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="budgetdt">
+                                            <mat-radio-button (click)="stopAudio2()" class="example-radio-button animated slideInUp faster" *ngFor="let bsd of budgetseasons; let i = index;" [value]="bsd">
+                                                {{bsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-8.png" alt="alternative">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What is your Job profile? </h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="profiledt">
+                                            <mat-radio-button (click)="stopAudio3()" class="example-radio-button animated slideInUp faster mt-1" *ngFor="let prosd of profileseasons; let i = index" [value]="prosd">
+                                                {{prosd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-6.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What is the purpose of property purchase?</h4>
+
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="purposedt">
+                                            <mat-radio-button (click)="stopAudio4()" class="example-radio-button animated slideInUp faster mt-1" *ngFor="let pursd of purposeseasons" [value]="pursd">
+                                                {{pursd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-2.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What type of property are you looking for investment? </h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="typedt">
+                                            <mat-radio-button (click)="stopAudio5()" class="example-radio-button animated slideInUp faster" *ngFor="let typesd of typeseasons" [value]="typesd">
+                                                {{typesd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/pic2.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What quality are you looking for in residential?</h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="qualitydt">
+                                            <mat-radio-button (click)="stopAudio6()" class="example-radio-button animated slideInUp faster" *ngFor="let qulsd of qualityseasons" [value]="qulsd">
+                                                {{qulsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-2.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-6" role="tabpanel" aria-labelledby="tab-6">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What is your preferred location? </h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="locariondt">
+                                            <mat-radio-button (click)="stopAudio7()" class="example-radio-button animated slideInUp faster" *ngFor="let locsd of locarionseasons" [value]="locsd">
+                                                {{locsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-5.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-7" role="tabpanel" aria-labelledby="tab-7">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What type of property are you looking for?</h4>
+
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="propertytypedt">
+                                            <mat-radio-button (click)="stopAudio8()" class="example-radio-button animated slideInUp faster" *ngFor="let propsd of propertytypeseasons" [value]="propsd">
+                                                {{propsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/pic2.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-8" role="tabpanel" aria-labelledby="tab-8">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What type of furnishing are you looking for?</h4>
+
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1" [(ngModel)]="furnishingdt">
+                                            <mat-radio-button (click)="stopAudio9()" class="example-radio-button animated slideInUp faster" *ngFor="let furnsd of furnishingseasons" [value]="furnsd">
+                                                {{furnsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-2.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-9" role="tabpanel" aria-labelledby="tab-9">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-10 col-12">
+                                    <div class="text-container pt-md-2">
+                                        <h4 class="animated slideInUp faster">What is Customer Behaviour?</h4>
+                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group mt-1 w-auto" [(ngModel)]="behaviourdt">
+                                            <mat-radio-button (click)="stopAudio10()" class="example-radio-button animated slideInUp faster w-auto" *ngFor="let behsd of behaviourseasons" [value]="behsd">
+                                                {{behsd}}
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                                    <img class="img-fluid animated zoomInDown fast" src="http://198.12.156.249:45001/pd/assets/images/Untitled-5.png" alt="alternative">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div id="details" class="basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="img-fluid animated zoomIn slow" src="http://198.12.156.249:45001/pd/assets/images/Untitled-4.png" alt="alternative">
+            </div>
+            <!-- end of col -->
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <h3 class="animated slideInUp slow">Why we intend to do….</h3>
+                    <p class="animated slideInUp slow">• Buyer and sellers are low on confidence and near Zero Interaction</p>
+                    <p class="animated slideInUp slow">• Decreasing sales</p>
+                    <p class="animated slideInUp slow">• Regulatory Challenges</p>
+                    <p class="animated slideInUp slow">• Long sales cycle and high human dependency</p>
+                    <a class="btn-solid-reg popup-with-move-anim animated slideInUp slow" href="#details-lightbox-1">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="basic-3">
+    <div class="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text-container">
+                        <h3 class="animated slideInUp slow">What we intend to do….</h3>
+                        <p class="animated slideInUp slow">• Increase buyer Confidence</p>
+                        <p class="animated slideInUp slow">• Make property search a highly personalized and intuitive experience</p>
+                        <p class="animated slideInUp slow">• Technology disruption with AI and Data Science </p>
+                        <p class="animated slideInUp slow">• Digital data driven sales to increase buyers and deal closure</p>
+                        <a class="btn-solid-reg popup-with-move-anim animated slideInUp slow" href="#details-lightbox-2">Read More</a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <img class="img-fluid animated zoomIn slow" src="http://198.12.156.249:45001/pd/assets/images/Untitled-6.png" alt="alternative">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="basic-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-6">
+                <div class="image-container">
+                    <img class="img-fluid animated zoomIn slow w-50" src="http://198.12.156.249:45001/pd/assets/images/Untitled-7.jpg" alt="alternative">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6">
+                <div class="text-container">
+                    <h2 class="animated slideInUp slow">Preferred <span class="blue">Location</span></h2>
+                    <p class="p-large animated slideInUp slow">Target the right customers for your business with the help of Leno's patented technology and increase conversion figures in less than 2 weeks</p>
+                    <a class="btn-solid-lg animated slideInUp slow" href="#your-link"><i class="fab fa-apple"></i>APP STORE</a>
+                    <a class="btn-solid-lg animated slideInUp slow" href="#your-link"><i class="fab fa-google-play"></i>PLAY STORE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div id="counter">
+                    <div class="cell">
+                        <div class="counter-value number-count animated zoomIn slow" data-count="231">486</div>
+                        <p class="counter-info animated zoomIn slow">Happy Users</p>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count animated zoomIn slow" data-count="85">432</div>
+                        <p class="counter-info animated zoomIn slow">Issues Solved</p>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count animated zoomIn slow" data-count="59">472</div>
+                        <p class="counter-info animated zoomIn slow">Good Reviews</p>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count animated zoomIn slow" data-count="127">560</div>
+                        <p class="counter-info animated zoomIn slow">Case Studies</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact -->
+<div id="contact" class="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 py-5 text-center">
+                <h2>CONTACT</h2>
+                <ul class="list-unstyled li-space-lg mb-0">
+                    <li class="address">Don't hesitate to give us a call or just use the contact form below</li>
+                    <li><i class="fas fa-map-marker-alt"></i>as-58, sector 12, Noida 201301, India</li>
+                    <li><i class="fas fa-phone"></i><a class="linkfrm" href="tel:91-9169971999">+91-9169971999</a></li>
+                    <li><i class="fas fa-envelope"></i><a class="linkfrm" href="mailto:office@aid.com">office@aid.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row pb-5">
+
+            <div class="col-md-4 contact-3">
+                <div class="contact-info text-center">
+                    <i class="crmicon fas fa-envelope"></i>
+                    <h2>Contact Us</h2>
+                    <h4>We would love to hear from you !</h4>
+                </div>
+            </div>
+            <div class="col-md-8 contact-9">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">Name:</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="comment">Comment:</label>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
